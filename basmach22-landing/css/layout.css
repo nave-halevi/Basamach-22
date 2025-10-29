@@ -206,3 +206,20 @@ section>h2 {
 .faq__item:hover {
     background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .03));
 }
+
+/* Sticky footer clean layout */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -17,21 +17,23 @@
             <p class="lead">ספר לנו בקצרה מה צריך — ונחזור אליך עם הצעה חדה.</p>
         </section>
 
-        <form class="form card" action="#" method="post" novalidate>
+        <!-- חיבור ישיר ל-Formspree -->
+        <form class="form card" action="https://formspree.io/f/xzzkgzwk" method="POST" novalidate>
             <div class="form__grid">
                 <label class="field">
                     <span>שם מלא</span>
-                    <input type="text" name="name" required>
+                    <input type="text" name="name" autocomplete="name" required>
                 </label>
 
                 <label class="field">
                     <span>אימייל</span>
-                    <input type="email" name="email" required>
+                    <input type="email" name="email" autocomplete="email" required>
                 </label>
 
                 <label class="field">
                     <span>טלפון</span>
-                    <input type="tel" name="phone" inputmode="tel" pattern="[0-9\-+\s]{7,}">
+                    <input type="tel" name="phone" inputmode="tel" autocomplete="tel"
+                        pattern="^0(5\d|7\d|2|3|4|8|9)-?\d{7}$">
                 </label>
 
                 <label class="field field--full">
@@ -40,15 +42,22 @@
                 </label>
             </div>
 
+            <!-- שדות מערכת ל-Formspree -->
+            <input type="hidden" name="_subject" value="פנייה חדשה מבסמ״ח 22">
+            <input type="hidden" name="_language" value="he">
+            <input type="hidden" name="_template" value="table">
+            <!-- אופציונלי: כתובת דף תודה בפרויקט שלך -->
+            <input type="hidden" name="_next" value="/thanks.html">
+
+            <!-- honeypot למניעת ספאם -->
+            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+
             <div class="form__actions">
                 <button class="btn btn--primary" type="submit">שליחה</button>
                 <a href="faq.html" class="btn btn--ghost">יש לי שאלה</a>
             </div>
         </form>
     </main>
-
-    </main>
-
 </body>
 
 </html>

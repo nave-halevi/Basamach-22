@@ -18,17 +18,28 @@
 }
 
 /* רשימות בתוך כרטיס */
-.card .service__list { text-align: start; }
+.card .service__list {
+  text-align: start;
+}
+
 .service__list {
   list-style: disc;
   padding-inline-start: 20px;
   margin: 10px 0;
 }
-.service__list li { margin: 4px 0; }
-.service__list li::marker { color: var(--primary); }
+
+.service__list li {
+  margin: 4px 0;
+}
+
+.service__list li::marker {
+  color: var(--primary);
+}
 
 /* טקסט משני */
-.muted { color: var(--muted); }
+.muted {
+  color: var(--muted);
+}
 
 /* =======================
    כפתורים (Buttons)
@@ -54,7 +65,7 @@
 .btn--ghost {
   background: transparent;
   color: var(--text);
-  border-color: rgba(255,255,255,.18);
+  border-color: rgba(255, 255, 255, .18);
 }
 
 /* אפקטים */
@@ -76,15 +87,24 @@
 }
 
 /* גדלים נוספים */
-.btn--sm { padding: 8px 14px; font-size: 14px; }
-.btn--lg { padding: 14px 22px; font-size: 17px; }
+.btn--sm {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.btn--lg {
+  padding: 14px 22px;
+  font-size: 17px;
+}
 
 /* =======================
    כרטיסי עבודות (Portfolio)
    ======================= */
 .work.card {
-  padding: 0;             /* ללא ריווח פנימי */
-  overflow: hidden;       /* חיתוך תמונה */
+  padding: 0;
+  /* ללא ריווח פנימי */
+  overflow: hidden;
+  /* חיתוך תמונה */
   display: grid;
   grid-template-rows: auto 1fr;
 }
@@ -94,7 +114,8 @@
   display: block;
   position: relative;
   overflow: hidden;
-  aspect-ratio: 16 / 10;  /* יחס תמונה קבוע */
+  aspect-ratio: 16 / 10;
+  /* יחס תמונה קבוע */
   background: rgba(255, 255, 255, .03);
 }
 
@@ -126,7 +147,9 @@
   margin-bottom: 6px;
 }
 
-.work__meta p { margin: 0; }
+.work__meta p {
+  margin: 0;
+}
 
 /* תגיות (Labels) */
 .tags {
@@ -166,10 +189,12 @@
   display: grid;
   gap: 6px;
 }
+
 .field span {
   font-size: 14px;
   color: var(--muted);
 }
+
 .field input,
 .field textarea {
   background: rgba(255, 255, 255, .06);
@@ -180,6 +205,7 @@
   outline: none;
   transition: border-color .15s ease, box-shadow .2s ease, background .2s ease;
 }
+
 .field input::placeholder,
 .field textarea::placeholder {
   color: #a6adbb;
@@ -211,7 +237,9 @@
 
 /* מובייל */
 @media (max-width: 720px) {
-  .form__grid { grid-template-columns: 1fr; }
+  .form__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* אוטופיל כרום */
@@ -227,7 +255,10 @@ textarea:-webkit-autofill {
 
 /* הפחתת תנועה למי שמעדיף */
 @media (prefers-reduced-motion: reduce) {
-  .card, .btn, .work__thumb img {
+
+  .card,
+  .btn,
+  .work__thumb img {
     transition: none !important;
   }
 }
@@ -236,4 +267,128 @@ textarea:-webkit-autofill {
 ::selection {
   background: color-mix(in srgb, var(--primary) 35%, transparent);
   color: #02160b;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+
+/* =======================
+   תיקוני רקע לפוטר
+   ======================= */
+/* בסיס: פריסת sticky שכבר אצלך */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg, #0f172a);
+  /* רקע אחיד לכל העמוד */
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* עיצוב הפוטר */
+.site-footer {
+  position: relative;
+  isolation: isolate;
+  text-align: center;
+  padding: 60px 0;
+  /* ↑ היה 20px – נותן הרבה יותר גובה */
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  color: var(--muted);
+  font-size: 15px;
+  background: var(--bg, #0f172a);
+  display: flex;
+  /* מאפשר ליישר אנכית את הטקסט */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* שכבת האור (glow) */
+.site-footer::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: min(1200px, 90vw);
+  height: 260px;
+  /* ↑ גובה גדול יותר של ההילה */
+  background: radial-gradient(600px 200px at 50% 0%,
+      rgba(255, 255, 255, .10),
+      rgba(255, 255, 255, .05) 40%,
+      transparent 75%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.site-footer .container {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+/* ===== Fix Chrome Autofill on dark inputs ===== */
+input,
+textarea,
+select {
+  background: var(--card, #0b1220);
+  color: var(--text, #e5e7eb);
+  caret-color: var(--text, #e5e7eb);
+}
+
+/* Chrome/Edge (Blink) */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-text-fill-color: var(--text, #e5e7eb) !important;
+  /* צבע טקסט */
+  caret-color: var(--text, #e5e7eb) !important;
+  transition: background-color 9999s ease-out, color 9999s ease-out !important;
+  /* מבטל הבהוב */
+  box-shadow: 0 0 0 1000px var(--card, #0b1220) inset !important;
+  /* מחזיר רקע כהה */
+  background-clip: padding-box;
+  /* שלא יזלוג מעבר לגבול */
+  border-radius: var(--radius, 12px);
+  /* לשמירת הרדיוס */
+}
+
+/* כשהשדה בפוקוס/הובר – שמור את אותו רקע כהה */
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+textarea:-webkit-autofill:hover,
+select:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--text, #e5e7eb) !important;
+  box-shadow: 0 0 0 1000px var(--card, #0b1220) inset !important;
+  border-color: var(--primary, #22c55e);
+}
+
+/* Firefox (לא חובה, אבל נחמד) */
+input:-moz-autofill,
+textarea:-moz-autofill,
+select:-moz-autofill {
+  box-shadow: 0 0 0 1000px var(--card, #0b1220) inset !important;
+  -moz-text-fill-color: var(--text, #e5e7eb) !important;
 }

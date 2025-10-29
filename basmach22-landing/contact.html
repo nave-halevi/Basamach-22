@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>צור קשר</title>
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <main class="container">
+        <section class="page-hero">
+            <h1>צור קשר</h1>
+            <p class="lead">ספר לנו בקצרה מה צריך — ונחזור אליך עם הצעה חדה.</p>
+        </section>
+
+        <form class="form card" action="#" method="post" novalidate>
+            <div class="form__grid">
+                <label class="field">
+                    <span>שם מלא</span>
+                    <input type="text" name="name" required>
+                </label>
+
+                <label class="field">
+                    <span>אימייל</span>
+                    <input type="email" name="email" required>
+                </label>
+
+                <label class="field">
+                    <span>טלפון</span>
+                    <input type="tel" name="phone" inputmode="tel" pattern="[0-9\-+\s]{7,}">
+                </label>
+
+                <label class="field field--full">
+                    <span>מה הצורך שלך?</span>
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+            </div>
+
+            <div class="form__actions">
+                <button class="btn btn--primary" type="submit">שליחה</button>
+                <a href="faq.html" class="btn btn--ghost">יש לי שאלה</a>
+            </div>
+        </form>
+    </main>
+
+    </main>
+
+</body>
+
+</html>

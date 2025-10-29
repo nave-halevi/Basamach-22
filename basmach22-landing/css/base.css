@@ -1,0 +1,101 @@
+/* Reset בסיסי */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* RTL בטוח + גלילה חלקה */
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+/* תמונות */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* רשימות בלי ריווחי ברירת מחדל */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* משתנים גלובליים (Design Tokens) */
+:root {
+    --bg: #0f172a;
+    --surface: #111827;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --primary: #22c55e;
+    --primary-ink: #052914;
+    --radius: 18px;
+    --shadow: 0 16px 40px rgba(0, 0, 0, .35);
+    --container: 1100px;
+}
+
+/* גוף הדף */
+body {
+    font-family: "Heebo", system-ui, -apple-system, Arial, sans-serif;
+    /* רקע יוקרתי: כתם אור עדין מעל הצבע הכהה */
+    background:
+        radial-gradient(1200px 600px at 70% -10%, #18324a 0%, transparent 60%),
+        var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* קישורים */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--primary) 40%, transparent);
+    outline-offset: 2px;
+    border-radius: 8px;
+}
+
+/* טיפוגרפיה בסיסית */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.lead {
+    color: var(--muted);
+}
+
+/* קונטיינר מרכזי */
+.container {
+    width: min(100% - 32px, var(--container));
+    margin-inline: auto;
+}
+
+/* בחירת טקסט נעימה */
+::selection {
+    background: color-mix(in srgb, var(--primary) 35%, transparent);
+    color: #02160b;
+}

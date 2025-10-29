@@ -1,0 +1,239 @@
+/* =======================
+   כרטיסים כלליים (Cards)
+   ======================= */
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+  border: 1px solid rgba(255, 255, 255, .09);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .28);
+  padding: 20px;
+  transition: transform .18s ease, box-shadow .25s ease, background .25s ease;
+}
+
+/* אפקט ריחוף עדין */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+}
+
+/* רשימות בתוך כרטיס */
+.card .service__list { text-align: start; }
+.service__list {
+  list-style: disc;
+  padding-inline-start: 20px;
+  margin: 10px 0;
+}
+.service__list li { margin: 4px 0; }
+.service__list li::marker { color: var(--primary); }
+
+/* טקסט משני */
+.muted { color: var(--muted); }
+
+/* =======================
+   כפתורים (Buttons)
+   ======================= */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, .12);
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  cursor: pointer;
+}
+
+/* כפתור עיקרי */
+.btn--primary {
+  background: var(--primary);
+  color: var(--primary-ink);
+  border-color: transparent;
+}
+
+/* כפתור שקוף */
+.btn--ghost {
+  background: transparent;
+  color: var(--text);
+  border-color: rgba(255,255,255,.18);
+}
+
+/* אפקטים */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+/* נגישות - מצב פוקוס במקלדת */
+.btn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  outline-offset: 2px;
+}
+
+/* מצב לחיצה */
+.btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* גדלים נוספים */
+.btn--sm { padding: 8px 14px; font-size: 14px; }
+.btn--lg { padding: 14px 22px; font-size: 17px; }
+
+/* =======================
+   כרטיסי עבודות (Portfolio)
+   ======================= */
+.work.card {
+  padding: 0;             /* ללא ריווח פנימי */
+  overflow: hidden;       /* חיתוך תמונה */
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* תמונת תצוגה */
+.work__thumb {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;  /* יחס תמונה קבוע */
+  background: rgba(255, 255, 255, .03);
+}
+
+.work__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform .4s ease, filter .4s ease;
+  filter: saturate(.9) contrast(1.05);
+}
+
+/* אפקט זום עדין על התמונה */
+.work.card:hover .work__thumb img {
+  transform: scale(1.05);
+  filter: saturate(1.05) contrast(1.1);
+}
+
+/* מידע מתחת לתמונה */
+.work__meta {
+  padding: 14px 16px 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(255, 255, 255, .02));
+  border-top: 1px solid rgba(255, 255, 255, .08);
+}
+
+.work__meta h2 {
+  font-size: 18px;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.work__meta p { margin: 0; }
+
+/* תגיות (Labels) */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .03);
+}
+
+/* =======================
+   טפסים (Forms)
+   ======================= */
+.form {
+  padding: 18px 18px 20px;
+}
+
+.form__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.field--full {
+  grid-column: 1 / -1;
+}
+
+/* שדות קלט */
+.field {
+  display: grid;
+  gap: 6px;
+}
+.field span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.field input,
+.field textarea {
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 12px;
+  color: var(--text);
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .2s ease, background .2s ease;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #a6adbb;
+  opacity: .8;
+}
+
+/* פוקוס בשדה */
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 20%, transparent);
+  background: rgba(255, 255, 255, .08);
+}
+
+/* שגיאות בסיסיות */
+.field input:invalid:focus,
+.field textarea:invalid:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #ef4444 20%, transparent);
+}
+
+/* פעולות טופס */
+.form__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+/* מובייל */
+@media (max-width: 720px) {
+  .form__grid { grid-template-columns: 1fr; }
+}
+
+/* אוטופיל כרום */
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--text);
+  -webkit-box-shadow: 0 0 0 30px rgba(255, 255, 255, .06) inset;
+}
+
+/* =======================
+   נגישות ושימושיות
+   ======================= */
+
+/* הפחתת תנועה למי שמעדיף */
+@media (prefers-reduced-motion: reduce) {
+  .card, .btn, .work__thumb img {
+    transition: none !important;
+  }
+}
+
+/* בחירת טקסט יפה */
+::selection {
+  background: color-mix(in srgb, var(--primary) 35%, transparent);
+  color: #02160b;
+}

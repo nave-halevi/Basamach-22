@@ -1,78 +1,216 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="he" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>שאלות נפוצות</title>
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>שאלות נפוצות — בסמ״ח 22</title>
+    <meta name="description" content="תשובות לשאלות נפוצות על דפי נחיתה, תהליך עבודה, מחירים ולוחות זמנים." />
+    <link rel="icon" href="assets/img/ab.jpg" sizes="32x32" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"כמה זמן לוקח לבנות דף נחיתה?",
+        "acceptedAnswer":{"@type":"Answer","text":"בדרך כלל 3–7 ימי עבודה, בהתאם להיקף, חומרים זמינים, ורמת הדיוק הנדרשת."}
+      },
+      {
+        "@type":"Question",
+        "name":"מה אתם צריכים ממני כדי להתחיל?",
+        "acceptedAnswer":{"@type":"Answer","text":"לוגו, צבעי מותג, מסרים עיקריים, ודוגמאות להשראה אם קיימות. נשמח לעזור גם בניסוח ומיקרו-קופי."}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+    <a class="sr-only" href="#main">דלג לתוכן</a>
 
-    <main class="container">
-        <section class="page-hero">
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">בסמ״ח 22</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <nav id="nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="services.html">שירותים</a></li>
+                    <li><a href="portfolio.html">דוגמאות</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a aria-current="page" href="faq.html">שאלות נפוצות</a></li>
+                    <li><a href="contact.html" class="btn btn--primary">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container">
+        <section class="hero">
             <h1>שאלות נפוצות</h1>
-            <p class="lead">ענינו על רוב הדברים מראש כדי לחסוך לך זמן.</p>
+            <p class="section-desc">ענינו על רוב הדברים מראש כדי לחסוך לך זמן.</p>
         </section>
 
         <section class="faq">
             <details class="faq__item card">
                 <summary>כמה זמן לוקח לבנות דף נחיתה?</summary>
                 <div class="faq__body">
-                    <p>בדרך כלל 3–7 ימי עבודה, תלוי בהיקף, חומרים ומידת הדיוק הנדרשת.</p>
+                    <p>בדרך כלל 3–7 ימי עבודה, תלוי בהיקף, חומרים זמינים ומידת הדיוק הנדרשת.</p>
                 </div>
             </details>
 
             <details class="faq__item card">
                 <summary>מה אתם צריכים ממני כדי להתחיל?</summary>
                 <div class="faq__body">
-                    <p>לוגו, צבעי מותג, מסרים עיקריים, ודוגמאות להשראה (אם יש).</p>
+                    <p>לוגו, צבעי מותג, מסרים עיקריים, ודוגמאות להשראה (אם יש). אפשר לעזור גם בכתיבה.</p>
                 </div>
             </details>
-        </section>
 
-        <section class="faq">
+            <!-- שאלות נוספות -->
             <details class="faq__item card">
-                <summary>כמה זמן לוקח לבנות דף נחיתה?</summary>
+                <summary>מה ההבדל בין דף נחיתה לאתר מלא?</summary>
                 <div class="faq__body">
-                    <p>בדרך כלל 3–7 ימי עבודה, תלוי בהיקף, חומרים ומידת הדיוק הנדרשת.</p>
+                    <p>דף נחיתה הוא עמוד יחיד שממוקד במטרה אחת – להמיר גולש לפעולה (כמו השארת פרטים או רכישה). אתר מלא
+                        כולל מספר עמודים, תפריט ניווט ותוכן רחב יותר.</p>
                 </div>
             </details>
 
+            <details class="faq__item card">
+                <summary>כמה עולה דף נחיתה מקצועי?</summary>
+                <div class="faq__body">
+                    <p>המחיר משתנה לפי עיצוב, תוכן ופונקציונליות, אך בדרך כלל נע בין ‎700‎–‎1800‎ ₪ לדף נחיתה איכותי
+                        ומותאם אישית.</p>
+                </div>
+            </details>
 
-            <section class="faq">
-                <details class="faq__item card">
-                    <summary>כמה זמן לוקח לבנות דף נחיתה?</summary>
-                    <div class="faq__body">
-                        <p>בדרך כלל 3–7 ימי עבודה, תלוי בהיקף, חומרים ומידת הדיוק הנדרשת.</p>
-                    </div>
-                </details>
+            <details class="faq__item card">
+                <summary>האם אפשר לחבר את הדף לטופס וואטסאפ או מערכת CRM?</summary>
+                <div class="faq__body">
+                    <p>כן! אנחנו מחברים את הדף לכל מערכת שתרצה – וואטסאפ, פייסבוק לידים, Monday, HubSpot ועוד, כדי שתוכל
+                        לקבל פניות בזמן אמת.</p>
+                </div>
+            </details>
 
+            <details class="faq__item card">
+                <summary>האם אתם גם כותבים את התוכן של הדף?</summary>
+                <div class="faq__body">
+                    <p>בהחלט. אנו מספקים שירותי כתיבה שיווקית מלאים – ניסוחים שמניעים לפעולה, כותרות ממירות ותוכן מותאם
+                        לעסק שלך.</p>
+                </div>
+            </details>
 
-                <section class="faq">
-                    <details class="faq__item card">
-                        <summary>כמה זמן לוקח לבנות דף נחיתה?</summary>
-                        <div class="faq__body">
-                            <p>בדרך כלל 3–7 ימי עבודה, תלוי בהיקף, חומרים ומידת הדיוק הנדרשת.</p>
-                        </div>
-                    </details>
+            <details class="faq__item card">
+                <summary>כמה זמן לוקח לסיים דף נחיתה?</summary>
+                <div class="faq__body">
+                    <p>בממוצע 3–7 ימי עבודה, תלוי אם כל החומרים מוכנים (לוגו, תמונות, טקסטים). ניתן גם שירות מהיר תוך 48
+                        שעות במקרה דחוף.</p>
+                </div>
+            </details>
 
+            <details class="faq__item card">
+                <summary>האם הדף מותאם לכל סוגי המסכים?</summary>
+                <div class="faq__body">
+                    <p>כן. כל דף נבנה בצורה רספונסיבית מלאה ומתאים למובייל, טאבלט ודסקטופ בצורה מושלמת.</p>
+                </div>
+            </details>
 
-                    <section class="faq">
-                        <details class="faq__item card">
-                            <summary>כמה זמן לוקח לבנות דף נחיתה?</summary>
-                            <div class="faq__body">
-                                <p>בדרך כלל 3–7 ימי עבודה, תלוי בהיקף, חומרים ומידת הדיוק הנדרשת.</p>
-                            </div>
-                        </details>
+            <details class="faq__item card">
+                <summary>האם אפשר לעדכן את התוכן בעתיד?</summary>
+                <div class="faq__body">
+                    <p>בוודאי. ניתן לערוך טקסטים, תמונות ואלמנטים בכל שלב, ואנו מספקים תמיכה גם לאחר העלאת הדף.</p>
+                </div>
+            </details>
 
-                        <div class="cta-row">
-                            <a href="contact.html" class="btn btn--primary">לא מצאת תשובה? דבר איתנו</a>
-                        </div>
+            <details class="faq__item card">
+                <summary>איפה הדף מתארח (נמצא באינטרנט)?</summary>
+                <div class="faq__body">
+                    <p>אנחנו מעלים את הדף לשרת מאובטח ומהיר עם תעודת SSL. ניתן גם לארח אותו אצלך בדומיין או בשרת משלך.
+                    </p>
+                </div>
+            </details>
+
+            <details class="faq__item card">
+                <summary>האם הדף שלכם כולל קידום בגוגל (SEO)?</summary>
+                <div class="faq__body">
+                    <p>כן, כל דף נבנה עם מבנה תקין, תגיות מטא ואופטימיזציה בסיסית לקידום אורגני במנועי חיפוש.</p>
+                </div>
+            </details>
+
+            <details class="faq__item card">
+                <summary>האם אני מקבל גישה לקוד של הדף?</summary>
+                <div class="faq__body">
+                    <p>כן, אנו מוסרים לך את כל הקבצים (HTML, CSS, JS) כך שתוכל לערוך, לשכפל או להשתמש בו גם בעתיד. הכול
+                        שלך לגמרי.</p>
+                </div>
+            </details>
+
+            <details class="faq__item card">
+                <summary>האם אפשר לשלב דף נחיתה עם קמפיין פרסום?</summary>
+                <div class="faq__body">
+                    <p>כן, אנו בונים את הדפים כך שיתאימו לפרסום ממומן בפייסבוק, אינסטגרם, טיקטוק וגוגל אדס, כולל מדידה
+                        והמרות.</p>
+                </div>
+            </details>
+
+            <!-- סגירת דף עם טקסט משכנע -->
+            <section class="cta-block" style="text-align:center; margin-top:60px; margin-bottom:40px;">
+                <h2>עדיין יש לכם שאלות? אנחנו כאן לכל דבר 💬</h2>
+                <p style="max-width:700px; margin:12px auto 24px; color:var(--muted); line-height:1.7;">
+                    עברתם על השאלות הנפוצות ועדיין משהו לא ברור?
+                    הצוות של <strong>בסמ״ח 22</strong> זמין תמיד להסביר, לייעץ ולכוון אתכם לתוצאה המדויקת ביותר לעסק
+                    שלכם.
+                    אין שאלה קטנה מדי ואין פרויקט גדול מדי — דברו איתנו ונמצא יחד את הפתרון המושלם.
+                </p>
+                <a href="contact.html" class="btn btn--primary btn--lg">דברו איתנו עכשיו</a>
+            </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 בסמ״ח 22. כל הזכויות שמורות.</p>
+            <p>פותח על ידי נוה הלוי</p>
+        </div>
+    </footer>
+
+    <script src="js/nav.js" defer></script>
+
+
+    <script>
+        // אנימציית כניסה לכרטיסים (cards)
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target); // רק פעם אחת
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            cards.forEach((card) => observer.observe(card));
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+
 
 </body>
 

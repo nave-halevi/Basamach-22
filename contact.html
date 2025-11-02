@@ -1,63 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>צור קשר</title>
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>צור קשר — בסמ״ח 22</title>
+    <meta name="description" content="צרו קשר עם בסמ״ח 22 ובואו לבנות דף נחיתה מנצח לעסק שלכם." />
+    <link rel="icon" href="assets/img/ab.jpg" sizes="32x32" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
 </head>
 
 <body>
-    <main class="container">
-        <section class="page-hero">
-            <h1>צור קשר</h1>
-            <p class="lead">ספר לנו בקצרה מה צריך — ונחזור אליך עם הצעה חדה.</p>
+    <a class="sr-only" href="#main">דלג לתוכן</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">בסמ״ח 22</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <nav id="nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="services.html">שירותים</a></li>
+                    <li><a href="portfolio.html">דוגמאות</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="faq.html">שאלות נפוצות</a></li>
+                    <li><a aria-current="page" href="contact.html" class="btn btn--primary">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="container">
+                <h1>צור קשר</h1>
+                <p class="section-desc">ספר לנו על העסק שלך ונבנה לך עמוד שממיר באמת.</p>
+            </div>
         </section>
 
-        <!-- חיבור ישיר ל-Formspree -->
-        <form class="form card" action="https://formspree.io/f/xzzkgzwk" method="POST" novalidate>
-            <div class="form__grid">
-                <label class="field">
-                    <span>שם מלא</span>
-                    <input type="text" name="name" autocomplete="name" required>
-                </label>
+        <section>
+            <div class="container">
+                <form action="https://formspree.io/f/xzzkgzwk" method="POST" class="form card" novalidate>
+                    <label>שם מלא
+                        <input name="name" required autocomplete="name" placeholder="הכנס שם מלא" />
+                    </label>
 
-                <label class="field">
-                    <span>אימייל</span>
-                    <input type="email" name="email" autocomplete="email" required>
-                </label>
+                    <label>אימייל
+                        <input type="email" name="email" required autocomplete="email"
+                            placeholder="example@gmail.com" />
+                    </label>
 
-                <label class="field">
-                    <span>טלפון</span>
-                    <input type="tel" name="phone" inputmode="tel" autocomplete="tel"
-                        pattern="^0(5\d|7\d|2|3|4|8|9)-?\d{7}$">
-                </label>
+                    <label>טלפון
+                        <input name="phone" inputmode="tel" autocomplete="tel" pattern="^[0-9\-\+\s]{8,}$"
+                            placeholder="050-1234567" />
+                    </label>
 
-                <label class="field field--full">
-                    <span>מה הצורך שלך?</span>
-                    <textarea name="message" rows="5" required></textarea>
-                </label>
+                    <label>מה הצורך שלך?
+                        <textarea name="message" required minlength="10"
+                            placeholder="ספר בקצרה על העסק ועל הדף הרצוי"></textarea>
+                    </label>
+
+                    <!-- honeypot -->
+                    <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr-only"
+                        aria-hidden="true" />
+
+                    <div class="form__actions">
+                        <button type="submit" class="btn btn--primary">שליחה</button>
+                        <a class="btn" href="https://wa.me/9725XXXXXXXX" rel="nofollow noopener">ווטסאפ</a>
+                        <a class="btn" href="tel:+9725XXXXXXXX">התקשר</a>
+                    </div>
+                </form>
             </div>
-
-            <!-- שדות מערכת ל-Formspree -->
-            <input type="hidden" name="_subject" value="פנייה חדשה מבסמ״ח 22">
-            <input type="hidden" name="_language" value="he">
-            <input type="hidden" name="_template" value="table">
-            <!-- אופציונלי: כתובת דף תודה בפרויקט שלך -->
-            <input type="hidden" name="_next" value="/thanks.html">
-
-            <!-- honeypot למניעת ספאם -->
-            <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
-
-            <div class="form__actions">
-                <button class="btn btn--primary" type="submit">שליחה</button>
-                <a href="faq.html" class="btn btn--ghost">יש לי שאלה</a>
-            </div>
-        </form>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 בסמ״ח 22. כל הזכויות שמורות.</p>
+            <p>פותח על ידי נוה הלוי</p>
+        </div>
+    </footer>
+
+
+    <script src="js/nav.js" defer></script>
+
+    <script>
+        // אנימציית כניסה לכרטיסים (cards)
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target); // רק פעם אחת
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            cards.forEach((card) => observer.observe(card));
+        });
+    </script>
+
+    <script src="js/reveal.js" defer></script>
+
 </body>
 
 </html>

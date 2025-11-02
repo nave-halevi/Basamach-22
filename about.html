@@ -1,40 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אודות</title>
-    <link rel="stylesheet" href="css/components.css">
+    <title>אודות — בסמ״ח 22</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
 </head>
 
 <body>
-    <main class="container">
-        <h1>מי אנחנו</h1>
-        <p>בסמ"ח 22 מתמחים בדפי נחיתה מהירים וממירים.</p>
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">בסמ״ח 22</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+            <nav id="nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="services.html">שירותים</a></li>
+                    <li><a href="portfolio.html">דוגמאות</a></li>
+                    <li><a aria-current="page" href="about.html">אודות</a></li>
+                    <li><a href="faq.html">שאלות נפוצות</a></li>
+                    <li><a href="contact.html" class="btn btn--primary">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <section class="process grid">
-            <article class="card">
-                <h2>1. אפיון</h2>
-                <p>הבנת היעדים והקהל.</p>
-            </article>
-            <article class="card">
-                <h2>2. עיצוב</h2>
-                <p>UI נקי עם UX ממוקד המרה.</p>
-            </article>
-            <article class="card">
-                <h2>3. פיתוח</h2>
-                <p>קוד איכותי, SEO ומהירות.</p>
-            </article>
-            <article class="card">
-                <h2>4. השקה ואופטימיזציה</h2>
-                <p>בדיקות, A/B, שיפור מתמשך.</p>
-            </article>
+    <main class="container">
+        <section class="page-hero">
+            <h1>מי אנחנו</h1>
+            <p class="lead">בסמ״ח 22 נולדה מתוך חזון פשוט — להפוך כל עסק, קטן או גדול, למותג דיגיטלי מנצח.</p>
         </section>
+        <section class="grid" style="margin-top: 40px;">
+
+            <article class="card">
+                <h2>החזון שלנו</h2>
+                <ul class="service__list">
+                    <li>אנחנו מאמינים שכל עסק צריך נוכחות דיגיטלית שנראית מעולה, נטענת מהר ומניעה לפעולה.</li>
+                    <li>המטרה שלנו היא להפוך רעיון שיווקי פשוט למכונה שמביאה לידים איכותיים — יום־יום ובצורה מדידה.</li>
+                    <li>כל פרויקט אצלנו מתחיל מהבנה עמוקה של הלקוח והקהל שלו, ומסתיים בדף שמרגיש טבעי, אמין ומדויק
+                        למותג.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>הצוות שלנו</h2>
+                <ul class="service__list">
+                    <li>מורכב ממעצבים, מתכנתים ואנשי שיווק שחיים דיגיטל ומדברים נתונים.</li>
+                    <li>לכל אחד יש התמחות משלו — UX, ביצועים, תוכן או אוטומציות.</li>
+                    <li>אנחנו עובדים שקוף, מתקשרים צמוד, ומוסרים תוצאה מדויקת עד הפיקסל האחרון.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>מה מייחד אותנו</h2>
+                <ul class="service__list">
+                    <li>עיצוב נקי ומקצועי — בלי תבניות גנריות.</li>
+                    <li>התאמה מושלמת לכל מכשיר ונייד.</li>
+                    <li>ביצועים גבוהים ואבטחה ברמה גבוהה.</li>
+                    <li>יחס אישי וליווי עד להשקה מלאה.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>התהליך שלנו</h2>
+                <ol class="service__list">
+                    <li><strong>אפיון:</strong> נבין את הצרכים והקהל שלך לעומק.</li>
+                    <li><strong>עיצוב:</strong> ניצור שפה ויזואלית מושכת וברורה.</li>
+                    <li><strong>פיתוח:</strong> נבנה אתר מהיר, נקי ומאובטח.</li>
+                    <li><strong>השקה:</strong> נעלה לאוויר ונלווה אותך בצעדים הראשונים.</li>
+                </ol>
+            </article>
+
+            <article class="card">
+                <h2>שירות לקוחות וזמינות</h2>
+                <ul class="service__list">
+                    <li>אנחנו זמינים לכל לקוח לכל שאלה — גם אחרי שהפרויקט הסתיים.</li>
+                    <li>מענה מהיר בוואטסאפ ובטלפון, עדכונים שוטפים ושקיפות מלאה בכל שלב.</li>
+                    <li>ההצלחה האמיתית מתחילה ביום שאחרי ההשקה, עם שיפור מתמשך.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>טכנולוגיה עדכנית</h2>
+                <ul class="service__list">
+                    <li>אנחנו עובדים עם HTML5, CSS3, JavaScript, React ו-Next.js.</li>
+                    <li>הקוד נקי, מודולרי וקל לתחזוקה ולשדרוג.</li>
+                    <li>מוכן לשילוב אנליטיקס, פיקסלים וטראקינג — לשיפור מתמיד.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>תוצאות מדידות</h2>
+                <ul class="service__list">
+                    <li>כל דף נבנה סביב מטרה ומדדים ברורים — קליקים, המרות ועלויות לליד.</li>
+                    <li>אנחנו מודדים כל פעולה ומבצעים אופטימיזציה לשיפור המרות.</li>
+                    <li>תמיד תדע מה עובד, כמה זה שווה ואיפה לשפר.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>הערכים שלנו</h2>
+                <ul class="service__list">
+                    <li>שקיפות מלאה מול הלקוח.</li>
+                    <li>איכות לפני כמות — כל פרויקט מקבל תשומת לב אישית.</li>
+                    <li>קוד תקני, עיצוב נצחי וביצועים גבוהים.</li>
+                    <li>הצלחה משותפת — כשאתה מצליח, גם אנחנו.</li>
+                </ul>
+            </article>
+
+        </section>
+
+        <section class="cta-block" style="margin-top: 60px; text-align: center;">
+            <h2>רוצים שגם העסק שלכם יבלוט?</h2>
+            <p>בואו נדבר על איך דף נחיתה אחד יכול לשנות את כל הדרך שבה לקוחות רואים אתכם.</p>
+            <a href="contact.html" class="btn btn--primary btn--lg" style="margin-top: 12px;">דברו איתנו</a>
+        </section>
+
     </main>
 
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 בסמ״ח 22. כל הזכויות שמורות.</p>
+            <p>פותח באהבה על ידי נוה הלוי</p>
+        </div>
+    </footer>
+
+    <script src="js/nav.js" defer></script>
+    <script src="js/reveal.js" defer></script>
 </body>
 
 </html>

@@ -2,19 +2,74 @@
 <html lang="he" dir="rtl">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>תודה!</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>תודה! — בסמ״ח 22</title>
+    <meta name="description" content="תודה שפניתם אל בסמ״ח 22! נחזור אליכם בהקדם." />
+    <link rel="icon" href="assets/img/ab.jpg" sizes="32x32" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
 </head>
 
 <body>
-    <main class="container" style="padding:48px 0">
-        <h1>תודה! ההודעה נשלחה ✅</h1>
-        <p>נחזור אליך בהקדם. <a class="btn btn--ghost" href="index.html">חזרה לדף הבית</a></p>
+    <a class="sr-only" href="#main">דלג לתוכן</a>
+
+    <header class="site-header">
+        <div class="container">
+            <a class="brand" href="index.html">בסמ״ח 22</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">☰</button>
+            <nav id="nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a href="services.html">שירותים</a></li>
+                    <li><a href="portfolio.html">דוגמאות</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="faq.html">שאלות נפוצות</a></li>
+                    <li><a href="contact.html" class="btn btn--primary">צור קשר</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="container" style="padding:80px 0;text-align:center">
+        <h1 style="margin-bottom:12px;">תודה! ההודעה נשלחה ✅</h1>
+        <p style="margin-bottom:32px;">נחזור אליך בהקדם האפשרי.</p>
+        <a class="btn btn--primary" href="index.html">חזרה לדף הבית</a>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 בסמ״ח 22. כל הזכויות שמורות.</p>
+            <p>פותח על ידי נוה הלוי</p>
+        </div>
+    </footer>
+
+    <script src="js/nav.js" defer></script>
+
+    <script>
+        // אנימציית כניסה לכרטיסים (cards)
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target); // רק פעם אחת
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            cards.forEach((card) => observer.observe(card));
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+
 </body>
 
 </html>

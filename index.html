@@ -2,23 +2,44 @@
 <html lang="he" dir="rtl">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>בסמ"ח 22 — יצירת דפי נחיתה</title>
-    <meta name="description" content="בסמ" ח 22 בונים דפי נחיתה ואתרי תדמית מהירים, יפים וממירים לעסקים.">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>בסמ״ח 22 — דפי נחיתה שממירים</title>
+    <meta name="description"
+        content="דפי נחיתה ואתרי תדמית מהירים, מעוצבים וממירים. התאמה מלאה למובייל, ביצועים גבוהים וקופי שמניע לפעולה." />
+    <link rel="icon" href="assets/img/ab.jpg" sizes="32x32" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- Open Graph בסיסי -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="בסמ״ח 22 — דפי נחיתה שממירים" />
+    <meta property="og:description" content="נבנה לך דף נחיתה פרימיום שמביא פניות במהירות." />
+    <meta property="og:image" content="assets/img/og-cover.jpg" />
+    <meta property="og:locale" content="he_IL" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
 </head>
 
 <body>
+    <a class="sr-only" href="#main">דלג לתוכן</a>
+
+    <!-- HEADER -->
     <header class="site-header">
         <div class="container">
-            <a class="brand" href="index.html">בסמ"ח 22</a>
-            <nav class="main-nav">
+            <a class="brand" href="index.html">בסמ״ח 22</a>
+
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <nav id="nav" class="main-nav">
                 <ul>
-                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a aria-current="page" href="index.html">דף הבית</a></li>
                     <li><a href="services.html">שירותים</a></li>
                     <li><a href="portfolio.html">דוגמאות</a></li>
                     <li><a href="about.html">אודות</a></li>
@@ -29,57 +50,156 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
 
-        <!-- HERO קודם -->
-        <section class="hero">
-            <div class="container">
-                <h1>דפי נחיתה שממירים — במהירות ובסטייל</h1>
-                <p>בונים לך עמודים חכמים, יפים ומהירים שמגדילים פניות ומכירות.</p>
-                <div class="cta">
-                    <a href="contact.html" class="btn btn--primary">בוא נתחיל</a>
-                    <a href="portfolio.html" class="btn btn--ghost">דוגמאות</a>
+        <!-- HERO -->
+        <section class="hero" style="padding:88px 0 48px;">
+            <div class="container" style="text-align:center;">
+                <h1>דפי נחיתה שמביאים פניות — מהר</h1>
+                <p class="section-desc" style="max-width:720px;margin:10px auto 0;">
+                    עיצוב נקי, מהירות טעינה, וקופי שממיר. בונים לך עמוד שמרגיש פרימיום, עובד בכל מכשיר,
+                    ומחובר למדידה ואנליטיקס.
+                </p>
+                <div class="cta" style="margin-top:20px;gap:12px;">
+                    <a href="contact.html" class="btn btn--primary btn--lg">אני רוצה הצעת מחיר</a>
+                    <a href="portfolio.html" class="btn btn--ghost btn--lg">ראה דוגמאות</a>
+                </div>
+
+                <!-- תגי אמון קצרים -->
+                <div class="badges"
+                    style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:22px;">
+                    <span class="tag">טעינה מהירה ⚡</span>
+                    <span class="tag">מותאם מובייל 📱</span>
+                    <span class="tag">מאובטח SSL 🔒</span>
+                    <span class="tag">מדידת המרות 📈</span>
                 </div>
             </div>
         </section>
 
-        <!-- FEATURES אחר כך -->
+        <!-- TRUST (לוגואים/אמון) -->
+        <section class="container" style="padding:10px 0 0;">
+            <div class="card"
+                style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;align-items:center;padding:12px 16px;">
+                <span class="muted">ללקוחות שכבר מרוצים:</span>
+                <img src="assets/img/my-card.png" alt="לוגו" style="height:26px;opacity:.8">
+                <img src="assets/img/my-card.png" alt="לוגו" style="height:26px;opacity:.8">
+                <img src="assets/img/my-card.png" alt="לוגו" style="height:26px;opacity:.8">
+                <img src="assets/img/my-card.png" alt="לוגו" style="height:26px;opacity:.8">
+            </div>
+        </section>
+
+        <!-- FEATURES -->
         <section class="features">
             <div class="container">
-                <h2>למה בסמ"ח 22?</h2>
+                <h2>למה בסמ״ח 22?</h2>
                 <div class="grid">
                     <article class="card">
-                        <h3>מהיר</h3>
-                        <p>ביצועים גבוהים וטעינה מהירה.</p>
-                        <a class="btn btn--ghost" href="services.html">עוד</a>
+                        <h3>מהירות שמביאה תוצאות</h3>
+                        <ul class="service__list">
+                            <li>ציון ביצועים גבוה ב-Lighthouse.</li>
+                            <li>טעינה מתקדמת לתמונות.</li>
+                            <li>קוד מינימלי ונקי.</li>
+                        </ul>
                     </article>
+
                     <article class="card">
-                        <h3>מאובטח</h3>
-                        <p>הצפנה חזקה והגנות מתקדמות.</p>
-                        <a class="btn btn--ghost" href="services.html">עוד</a>
+                        <h3>מותאם לקמפיינים</h3>
+                        <ul class="service__list">
+                            <li>פיקסלים ואירועים לגוגל/פייסבוק/טיקטוק.</li>
+                            <li>A/B Testing לפי צורך.</li>
+                            <li>טפסים מחוברים ל-CRM/וואטסאפ.</li>
+                        </ul>
                     </article>
+
                     <article class="card">
-                        <h3>גמיש</h3>
-                        <p>מותאם לכל מסך ולכל צורך.</p>
-                        <a class="btn btn--ghost" href="services.html">עוד</a>
+                        <h3>עיצוב שממיר</h3>
+                        <ul class="service__list">
+                            <li>UI נקי ומותאם מותג.</li>
+                            <li>קופי שמדבר ללקוח.</li>
+                            <li>CTA ברור בכל קטע.</li>
+                        </ul>
                     </article>
+
                     <article class="card">
-                        <h3>מודרני</h3>
-                        <p>עיצוב נקי עם אפקטים עדינים.</p>
-                        <a class="btn btn--ghost" href="portfolio.html">דוגמאות</a>
+                        <h3>ליווי ושקיפות</h3>
+                        <ul class="service__list">
+                            <li>עדכון שוטף לאורך העבודה.</li>
+                            <li>בעלות מלאה על הקוד.</li>
+                            <li>תמיכה גם אחרי ההשקה.</li>
+                        </ul>
                     </article>
                 </div>
             </div>
         </section>
+
+        <!-- NUMBERS / RESULTS -->
+        <section class="container" style="margin-top:12px;">
+            <div class="card"
+                style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;text-align:center;">
+                <div>
+                    <div style="font-weight:800;font-size:28px;color:var(--primary);">3–7</div>
+                    <div class="muted">ימי עבודה לדף</div>
+                </div>
+                <div>
+                    <div style="font-weight:800;font-size:28px;color:var(--primary);">+27%</div>
+                    <div class="muted">שיפור יחסי המרה</div>
+                </div>
+                <div>
+                    <div style="font-weight:800;font-size:28px;color:var(--primary);">90+</div>
+                    <div class="muted">ציון ביצועים</div>
+                </div>
+                <div>
+                    <div style="font-weight:800;font-size:28px;color:var(--primary);">100%</div>
+                    <div class="muted">מותאם מובייל</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA BOTTOM -->
+        <section class="cta-block" style="text-align:center; margin:60px 0 40px;">
+            <h2>בונים לכם עמוד שמרגיש פרימיום — וממיר בפועל</h2>
+            <p style="max-width:700px; margin:12px auto 24px; color:var(--muted); line-height:1.7;">
+                בין אם זה קמפיין מהיר או מותג שרוצה לבלוט — נבנה לכם דף שמציג את הערך בצורה חדה,
+                נטען ברגע וגורם ללקוחות להשאיר פרטים. בואו נניע את זה יחד.
+            </p>
+            <a href="contact.html" class="btn btn--primary btn--lg">בואו נדבר</a>
+        </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2024 בסמ"ח 22. כל הזכויות שמורות.</p>
+            <p>&copy; 2024 בסמ״ח 22. כל הזכויות שמורות.</p>
+            <p>פותח על ידי נוה הלוי</p>
         </div>
     </footer>
+
+    <script src="js/nav.js" defer></script>
+
+
+
+    <script>
+        // אנימציית כניסה ל-CTA כשמגיעים אליו
+        document.addEventListener('DOMContentLoaded', () => {
+            const cta = document.querySelector('.cta-block');
+            if (!cta) return;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        cta.classList.add('visible');
+                        observer.unobserve(cta);
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            observer.observe(cta);
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
+
+
 </body>
 
 </html>
-
-<!-- https://formspree.io/f/xzzkgzwk -->

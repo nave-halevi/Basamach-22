@@ -1,44 +1,136 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>בסמ"ח 22 — שירותים</title>
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>שירותים — בסמ״ח 22</title>
+    <meta name="description"
+        content="שירותי דפי נחיתה ואתרי תדמית: עיצוב, פיתוח, ביצועים ו-SEO — עם התאמה מלאה למובייל." />
+    <link rel="icon" href="assets/img/ab.jpg" sizes="32x32" />
+    <meta name="theme-color" content="#0f172a" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
 </head>
 
 <body>
-    <section class="page-hero">
+    <a class="sr-only" href="#main">דלג לתוכן</a>
+
+    <header class="site-header">
         <div class="container">
-            <h1>השירותים שלנו</h1>
-            <p class="lead">דפי נחיתה ואתרי תדמית ברמה גבוהה, עם דגש על מהירות והמרה.</p>
+            <a class="brand" href="index.html">בסמ״ח 22</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="פתיחת תפריט">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+
+            <nav id="nav" class="main-nav">
+                <ul>
+                    <li><a href="index.html">דף הבית</a></li>
+                    <li><a aria-current="page" href="services.html">שירותים</a></li>
+                    <li><a href="portfolio.html">דוגמאות</a></li>
+                    <li><a href="about.html">אודות</a></li>
+                    <li><a href="faq.html">שאלות נפוצות</a></li>
+                    <li><a href="contact.html" class="btn btn--primary">צור קשר</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-    </section>
+    <main id="main">
+        <!-- HERO עקבי עם העיצוב הראשי -->
+        <section class="hero">
+            <div class="container">
+                <h1>השירותים שלנו</h1>
+                <p class="section-desc">דפי נחיתה ואתרי תדמית ברמה גבוהה, עם דגש על מהירות והמרה.</p>
+            </div>
+        </section>
 
-    <main class="container">
         <section>
-            <h2>מה אנחנו מציעים?</h2>
-            <div class="grid">
-                <article class="card">
-                    <header class="service__list">
-                        <h3>דף נחיתה</h3>
-                        <p class="muted">עמוד יחיד שמייצר פניות במהירות.</p>
-                    </header>
-                    <ul class="service__list">
-                        <li>עיצוב מותאם מותג</li>
-                        <li>רספונסיבי מלא</li>
-                        <li>טופס פניות</li>
-                    </ul>
-                    <a class="btn btn--primary" href="contact.html">הצעת מחיר</a>
-                </article>
-                <!-- עוד כרטיסים -->
+            <div class="container">
+                <h2 class="section-title">מה אנחנו מציעים?</h2>
+
+                <div class="grid">
+                    <!-- כרטיס שירות 1 -->
+                    <article class="card">
+                        <header class="service__header">
+                            <h3>דף נחיתה</h3>
+                            <p class="section-desc">עמוד יחיד שמייצר פניות במהירות.</p>
+                        </header>
+                        <ul class="service__list">
+                            <li>עיצוב מותאם מותג</li>
+                            <li>רספונסיבי מלא</li>
+                            <li>טופס פניות/ווטסאפ</li>
+                        </ul>
+                        <a class="btn btn--primary" href="contact.html">הצעת מחיר</a>
+                    </article>
+
+                    <!-- כרטיס שירות 2 (דוגמה) -->
+                    <article class="card">
+                        <header class="service__header">
+                            <h3>אתר תדמית</h3>
+                            <p class="section-desc">מספר עמודים מהירים ונקיים עם SEO בסיסי.</p>
+                        </header>
+                        <ul class="service__list">
+                            <li>מעטפת עיצובית מלאה</li>
+                            <li>ניווט ברור + תוכן</li>
+                            <li>הטמעת אנליטיקס</li>
+                        </ul>
+                        <a class="btn btn--primary" href="contact.html">דברו איתנו</a>
+                    </article>
+
+                    <!-- כרטיס שירות 3 (דוגמה) -->
+                    <article class="card">
+                        <header class="service__header">
+                            <h3>אופטימיזציה לביצועים</h3>
+                            <p class="section-desc">טעינה מהירה ותוצאות Lighthouse גבוהות.</p>
+                        </header>
+                        <ul class="service__list">
+                            <li>דחיסת תמונות (WebP/AVIF)</li>
+                            <li>Lazy Loading ו-Preload חכם</li>
+                            <li>שיפור Core Web Vitals</li>
+                        </ul>
+                        <a class="btn btn--primary" href="contact.html">ייעוץ מהיר</a>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 בסמ״ח 22. כל הזכויות שמורות.</p>
+            <p>פותח על ידי נוה הלוי</p>
+        </div>
+    </footer>
+
+    <script src="js/nav.js" defer></script>
+
+
+
+    <script>
+        // אנימציית כניסה לכרטיסים (cards)
+        document.addEventListener("DOMContentLoaded", () => {
+            const cards = document.querySelectorAll(".card");
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("visible");
+                            observer.unobserve(entry.target); // רק פעם אחת
+                        }
+                    });
+                },
+                { threshold: 0.2 }
+            );
+
+            cards.forEach((card) => observer.observe(card));
+        });
+    </script>
+    <script src="js/reveal.js" defer></script>
 
 </body>
 

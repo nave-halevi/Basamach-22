@@ -68,7 +68,7 @@
                     <img src="assets/img/M.M.png" alt="דף נחיתה לחברת הגברה ותאורה" width="640" height="400"
                         loading="lazy" decoding="async" />
                 </a>
-                <div class="work__meta"> 
+                <div class="work__meta">
                     <h2>הגברה ותאורה -MM</h2>
                     <p class="muted">יצירת דף לעסק MM עם דגש עם פרטיים הקטנים </p>
                     <div class="tags">
@@ -181,6 +181,20 @@
         });
     </script>
     <script src="js/reveal.js" defer></script>
+
+    <script src="js/a11y.js" defer></script>
+
+    <!-- נגישות לחצן -->
+    <button class="a11y-btn" aria-label="כפתור נגישות">♿</button>
+    <div class="a11y-menu" id="a11yMenu" hidden>
+        <ul>
+            <li><button class="contrast-btn">ניגודיות גבוהה</button></li>
+            <li><button class="font-dec">הקטנת טקסט</button></li>
+            <li><button class="font-reset">איפוס גודל</button></li>
+            <li><button class="font-inc">הגדלת טקסט</button></li>
+        </ul>
+    </div>
+
 </body>
 
 </html>

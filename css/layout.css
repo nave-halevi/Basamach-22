@@ -347,73 +347,75 @@ body.nav-open #nav {
 }
 
 
-/* a11y button */
-
-.a11y-btn {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 30px;
-    background-color: #0f172a;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.a11y-btn:hover {
-    background-color: #0ff01a;
-    color: black;
-}
-
-.a11y-btn:active {
-    background-color: #fffb00;
-}
-
-
+/* פאנל נגישות – פריסה מסודרת */
 .a11y-menu {
     position: fixed;
     bottom: 80px;
-    right: 20px;
-    background-color: #0f172a;
-    color: white;
-    border-radius: 10px;
+    inset-inline-end: 20px;
+    /* RTL-ידידותי (במקום right) */
+    background: #0f172a;
+    color: #fff;
+    border-radius: 12px;
     padding: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    flex-direction: column;
-    gap: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
     z-index: 1000;
 }
 
+/* מבטל נקודות של הרשימה בתוך הפאנל */
+.a11y-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* טור מסודר עם רווחים והידבק לרוחב הפאנל */
+.a11y-menu ul li {
+    margin: 0 0 8px;
+}
+
+.a11y-menu ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* כפתורים ברוחב מלא ויישור יפה */
 .a11y-menu button {
-    background-color: #1e293b;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
+    display: block;
+    width: 100%;
+    min-width: 180px;
+    /* הרגשה יציבה; שנה לפי טעם */
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 8px;
     font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background: #22c55e;
+    /* צהוב כמו בתמונה */
+    color: #000;
+    text-align: center;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .6) inset, 0 2px 8px rgba(0, 0, 0, .25);
 }
 
 .a11y-menu button:hover {
-    background-color: #22c55e;
-    color: black;
+    filter: brightness(1.05);
 }
 
-
-/* מצב ניגודיות גבוהה */
-html[data-contrast="on"] {
-    background-color: #000 !important;
-    color: #fff !important;
-}
-
-/* כפתורים במצב ניגודיות */
-html[data-contrast="on"] button {
-    background-color: #ffff00 !important;
-    /* צהוב */
-    color: #000 !important;
+/* כפתור העיגול למטה */
+.a11y-btn {
+    position: fixed;
+    bottom: 20px;
+    inset-inline-end: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: rgba(96, 165, 250, .25);
+    color: #164;
     border: 2px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .35);
+    z-index: 1000;
+}
+
+/* כש-hidden קיים – הפאנל באמת נסגר */
+.a11y-menu[hidden] {
+    display: none !important;
 }

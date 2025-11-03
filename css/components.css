@@ -74,7 +74,8 @@
 .btn--primary {
   background: linear-gradient(180deg, var(--primary), color-mix(in oklab, var(--primary), black 12%));
   color: var(--primary-contrast);
-  border-color: transparent;
+  /* border-color: transparent; */
+  border: 1px solid rgba(255, 255, 255, .12);
 }
 
 .btn--ghost {

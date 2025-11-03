@@ -123,15 +123,23 @@ html[data-contrast="on"] * {
     /* מבטל גרדיאנטים */
 }
 
+/* במצב ניגודיות — גם כפתורי הנגישות עצמם הופכים לצהובים */
+html[data-contrast="on"] .a11y-menu button,
+html[data-contrast="on"] .a11y-btn {
+    background-color: #ffff00 !important;
+    color: #000 !important;
+    border: 2px solid #fff !important;
+    box-shadow: none !important;
+}
+
 /* חשוב: מבטל את הגרדיאנט של ה-body כדי שיתאפס לרקע שטוח */
 html[data-contrast="on"] body {
     background: var(--bg) !important;
 }
 
 
-html{
-  --font-scale: 1;                  /* 1 = 100% */
-  font-size: calc(100% * var(--font-scale));
+html {
+    --font-scale: 1;
+    /* 1 = 100% */
+    font-size: calc(100% * var(--font-scale));
 }
-
-

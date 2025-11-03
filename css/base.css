@@ -99,3 +99,39 @@ p {
     background: color-mix(in srgb, var(--primary) 35%, transparent);
     color: #02160b;
 }
+
+/* כשהאלמנט hidden – שלא יופיע בכלל */
+.a11y-menu[hidden] {
+    display: none !important;
+}
+
+/* ניגודיות גבוהה: מחליפים Design Tokens */
+html[data-contrast="on"] {
+    --bg: #000;
+    --surface: #000;
+    --text: #ffff00;
+    --muted: #e5e7eb;
+    --primary: #ffff00;
+    --primary-ink: #000;
+}
+
+/* מסירים רעש שמקשה על קריאה */
+html[data-contrast="on"] * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    background-image: none !important;
+    /* מבטל גרדיאנטים */
+}
+
+/* חשוב: מבטל את הגרדיאנט של ה-body כדי שיתאפס לרקע שטוח */
+html[data-contrast="on"] body {
+    background: var(--bg) !important;
+}
+
+
+html{
+  --font-scale: 1;                  /* 1 = 100% */
+  font-size: calc(100% * var(--font-scale));
+}
+
+

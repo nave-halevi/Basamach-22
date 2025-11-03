@@ -345,3 +345,75 @@ body.nav-open #nav {
         opacity: 1;
     }
 }
+
+
+/* a11y button */
+
+.a11y-btn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 30px;
+    background-color: #0f172a;
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.a11y-btn:hover {
+    background-color: #0ff01a;
+    color: black;
+}
+
+.a11y-btn:active {
+    background-color: #fffb00;
+}
+
+
+.a11y-menu {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #0f172a;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000;
+}
+
+.a11y-menu button {
+    background-color: #1e293b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.a11y-menu button:hover {
+    background-color: #22c55e;
+    color: black;
+}
+
+
+/* מצב ניגודיות גבוהה */
+html[data-contrast="on"] {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+
+/* כפתורים במצב ניגודיות */
+html[data-contrast="on"] button {
+    background-color: #ffff00 !important;
+    /* צהוב */
+    color: #000 !important;
+    border: 2px solid #fff;
+}
